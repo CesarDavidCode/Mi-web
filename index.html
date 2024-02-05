@@ -4,11 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finca [Nombre] en Venta</title>
-    <!-- Agrega enlaces a tus estilos CSS si es necesario -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2ecc71;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section#contacto {
+            margin-bottom: 60px;
+        }
+
+        /* Estilos adicionales para un diseño más moderno y minimalista */
+        body {
+            line-height: 1.6;
+        }
+
+        section {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        section:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Puedes ajustar los estilos según tus preferencias */
+        .imagen-circular {
+            border-radius: 50%; /* Esto hace que el borde sea circular */
+            overflow: hidden; /* Esto asegura que la imagen se ajuste al borde circular */
+            width: 140px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+        }
+
+
+    </style>
 </head>
 <body>
 
     <header>
+        <img src="foto.JPG" alt="Portada de la Finca" class="imagen-circular">
         <h1>Finca [Nombre]</h1>
         <p>Un Paraíso en Venta</p>
     </header>
