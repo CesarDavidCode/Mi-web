@@ -5,52 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINCA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlace a FontAwesome -->
+    
+
     <style>
+        /* Estilos generales */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+        }
+        
+        /* Estilos para la cabecera */
+        header {
+            background-color: #ffffff; /* Azul característico de Meta */
+            padding: 20px;
+            z-index: 1000;
         }
 
-        header {
-            background-color: #3b5998; /* Azul característico de Meta */
-            color: #fff;
-            text-align: center;
+        .portada {
+            background-color: #ffffff; /* Azul característico de Meta */
             padding: 20px;
         }
 
-        nav {
-            background-color: #2c3e50; /* Azul oscuro */
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
+        .portada h1 {
+            font-family: Garamond, serif;
+            font-size: 50px; /* Tamaño de fuente */
+            color: #970042; /* Color de texto */
+            font-weight: bold; /* Hacer el texto en negrita */
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 0px; /* Puedes ajustar este valor según sea necesario */
+            margin-top: 10px; /* Puedes ajustar este valor según sea necesario */
         }
 
+        /* Estilos para la barra de navegación */
+        nav {
+            background-color: #ffffff; /* Amarillo */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 0px; /* Cambia el valor según sea necesario */
+        }
+
+        /* Estilo para cada botón de la barra de navegación */
         nav a {
             color: #ffffff;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 5px;
-            border-radius: 5px;
+            border-radius: 20px; /* Ajusta el radio para hacer los bordes curvos */
+            background-color: #970042; /* Color de fondo transparente */
             transition: background-color 0.3s;
         }
 
+        /* Agrega el ícono antes del texto del botón */
+        nav a::before {
+            font-family: "Font Awesome 5 Free"; /* Especifica la fuente de Font Awesome */
+            content: "\f015"; /* Código Unicode del ícono que quieres agregar */
+            margin-right: 5px; /* Ajusta el margen derecho para separar el ícono del texto */
+        }
         nav a:hover {
-            background-color: #096cee; /* Azul oscuro al pasar el ratón */
+            background-color: #b21f57; /* Color de fondo con transparencia al pasar el ratón */
         }
 
+        /* Estilos para las secciones */
         section {
-            margin: 20px;
+            margin-top: 10px; /* Ajusta el margen superior según sea necesario */
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+            background-image: url(fondo2.jpg); /* Ruta de la imagen de textura */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            padding: 20px; /* Ajusta el relleno según sea necesario */
+            max-width: 800px; /* Ancho máximo deseado */
+            margin: 0 auto; /* Centra la sección horizontalmente */
+            margin-bottom: 20px; /* Espacio entre cada sección */
+        }
+        /* Estilos para la primera sección */
+        #galeria {
+            padding: 100px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+            background-image: url(fondo2.jpg); /* Ruta de la imagen de textura */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            padding: 20px; /* Ajusta el relleno según sea necesario */
+            margin-top: 80px; /* Ajusta el margen superior para dejar espacio debajo de la portada */
+        }
+
+
+
+
+        /* Estilo de la sombra al pasar el ratón sobre la sección */
+        section:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.527); /* Sombra más pronunciada al pasar el ratón */
         }
 
         h2 {
-            color: #3b5998; /* Azul característico de Meta */
+            color: #b21f57; /* Color titulos de las secciones */
+            font-size: 20px;
         }
 
         ul {
@@ -58,162 +111,142 @@
             padding: 0;
         }
 
-        footer {
-            background-color: #3b5998; /* Azul característico de Meta */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .imagen-logo {
+            width: 130px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: 130px; /* Ajusta el tamaño de la imagen según sea necesario */
         }
 
-       
-
-        /* Estilos adicionales para un diseño más elegante y profesional */
-        body {
-            line-height: 1.6;
-        }
-
-        section {
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        section:hover {
-            box-shadow: 0 4px 8px rgb(105, 101, 101); /* Sombra más pronunciada al pasar el ratón */
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        .imagen-circular {
-            border-radius: 50%; /* Hace que el borde sea circular */
-            overflow: hidden; /* Asegura que la imagen se ajuste al borde circular */
-            width: 140px; /* Ajusta el tamaño de la imagen según sea necesario */
-            height: 140px; /* Ajusta el tamaño de la imagen según sea necesario */
-        }
-
-        /* Estilos para los botones */
+        /* Estilos para los botones de redes sociales */
         .boton-redes {
-        background-color: #3b5998; /* Azul característico de Meta */
-        border: none;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 10px;
-        cursor: pointer;
-        border-radius: 50%; /* Hace que el botón sea circular */
-        width: 35px; /* Ajusta el ancho del botón */
-        height: 35px; /* Ajusta la altura del botón */
-        transition: background-color 0.3s;
+            background-color: #004298; /* Azul característico de Meta */
+            border: none;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 50%; /* Hace que el botón sea circular */
+            width: 20px; /* Ajusta el ancho del botón */
+            height: 20px; /* Ajusta la altura del botón */
+            transition: background-color 0.3s;
         }
 
         .boton-redes:hover {
-            background-color: #2c3e50; /* Azul oscuro al pasar el ratón */
+            background-color: #2556b1; /* Azul oscuro al pasar el ratón */
         }
+
         /* Estilos para el contenedor de redes sociales */
-
-        #redes{
+        #redes {
             background-color: rgb(25, 32, 96); 
-            padding: 10px; 
             text-align: center; 
-            margin-top: 20px; 
-            margin-bottom: 0;
-        }
-        #redes_sociales {
-            background-color: rgb(25, 32, 96); 
-            padding: 20px;
-            display: flex; /* Activar el modelo de caja flexible */
-            justify-content: space-between; /* Espacio entre los elementos */
-            border-radius: 0; /* Sin esquinas curvas */
-            margin-top: 20px;
-            margin-bottom: 0; /* Sin margen inferior */
-        }
-
-        .columna {
-            flex: 1; /* Que cada columna ocupe el mismo espacio */
+            margin-top: 0px; 
+            margin-bottom: 0px;
             text-align: center; /* Centrar el contenido */
             color: #fff; /* Cambiar el color del texto a blanco */
         }
 
+        /* Estilos para el div superior */
+        #top-bar {
+            background-color: #0e7eef; /* Color de fondo azul */
+            padding: 20px 0; /* Espaciado interno arriba y abajo */
+            position: fixed; /* Fijar el div en la parte superior */
+            top: 0; /* Pegar el div en la parte superior */
+            width: 100%; /* Ancho completo */
+            z-index: 1000; /* Asegurar que esté sobre otros elementos */
+            color: #fff; /* Color de texto blanco */
+            text-align: center; /* Centrar el texto */
+        }
 
+        /* Estilos para el texto dentro del div */
+        #top-bar h1 {
+            margin: 0; /* Eliminar el margen predeterminado */
+            font-size: 24px; /* Tamaño de fuente */
+            font-weight: bold; /* Negrita */
+        }
 
+        .logo {
+            position: absolute; /* Hacer que el logo se posicione absolutamente dentro del header */
+            left: 20px; /* Ajustar la distancia desde el borde izquierdo */
+            top: 5px; /* Ajustar la distancia desde el borde superior */
+            width: 120px; /* Establecer un ancho fijo para el logo */
+            height: auto; /* Mantener la proporción */
+        }
+
+        #info-footer {
+            text-align: center; /* Centra el contenido horizontalmente */
+            padding: 0px; /* Ajusta el espaciado interno según sea necesario */
+            font-size: 14px; /* Tamaño de fuente */
+            line-height: 0.5; /* Reducción del espacio entre renglones */
+        }
     </style>
 </head>
+
 <body>
-
-    <header>
-        <img src="foto.JPG" alt="Portada de la Finca" class="imagen-circular">
-        <h1 style="font-size: 24px;">LAGOS DE SALAMANCA</h1>
-        <p>Un Paraíso De Santa Rosa</p>
+    <header id="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="portada">
+            <h1>LAGOS DE SALAMANCA</h1>
+        </div>
     </header>
-
     <nav>
-        <a href="#galeria">Galería</a>
-        <a href="#informacion">Información</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#amenidades">Amenidades</a>
-        <a href="#redes_sociales">Contacto</a>
+        <a href="#galeria"><i class="fas fa-images fa-inverse"></i> Galería</a>
+        <a href="#informacion"><i class="fas fa-info-circle fa-inverse"></i> Información</a>
+        <a href="#ubicacion"><i class="fas fa-map-marker-alt fa-inverse"></i> Ubicación</a>
+        <a href="#amenidades"><i class="fas fa-swimming-pool fa-inverse"></i> Amenidades</a>
+        <a href="#redes_sociales"><i class="fas fa-envelope fa-inverse"></i> Contacto</a>
     </nav>
-
-    <section id="galeria">
-        <h2 style="font-size: 20px;">Galería de Fotos</h2>
-        <!-- Agrega aquí tu galería de imágenes -->
-    </section>
-
-    <section id="informacion">
-        <h2 style="font-size: 20px;">Información de la Finca</h2>
-        <p>Descripción detallada de la finca, especificaciones y características principales.</p>
-    </section>
-
-    <section id="ubicacion">
-        <h2 style="font-size: 20px;">Ubicación y Accesibilidad</h2>
-        <!-- Agrega un mapa interactivo y detalles de la ubicación -->
-    </section>
-
-    <section id="amenidades">
-        <h2 style="font-size: 20px;">Amenidades y Características</h2>
-        <ul>
-            <li>Listado de comodidades</li>
-            <li>Características especiales</li>
-        </ul>
-    </section>
-
     
-    <div id="redes_sociales">
-        <div class="columna">
-            <p>Correo electrónico</p>
-        </div>
-        <div class="columna">
-            <div style="text-align: center; margin-top: 20px;">
-                <p>Horarios de atención: Lunes a Viernes de 9:00 am a 5:00 pm</p>
-            </div>
-        </div>
-        <div class="columna">
-            <p>Horarios:</p>
-        </div>
+
+    <div id="contenedor-textura">
+        <section id="galeria">
+            <h2>Galería de Fotos</h2>
+            <!-- Agrega aquí tu galería de imágenes -->
+        </section>
+    
+        <section id="informacion">
+            <h2>Información de la Finca</h2>
+            <p>¡Bienvenidos al paraíso en la tierra! Se ofrecen lotes de ensueño en el encantador municipio de Agua de Dios, Cundinamarca, donde la serenidad y la belleza se fusionan en un ambiente perfecto para construir la casa de tus sueños. Imagina despertar cada mañana en medio de paisajes pintorescos y suaves brisas, donde el sol brilla eternamente sobre terrenos planos y exuberantes. Ubicados en tierra caliente, estos lotes te invitan a disfrutar de un clima tropical constante, ideal para vivir en armonía con la naturaleza y escapar del estrés de la ciudad. Con amplias extensiones de terreno, podrás crear tu propio oasis de tranquilidad y relajación, lejos del bullicio urbano. Descubre la verdadera belleza de la vida campestre en Agua de Dios, donde cada lote es una oportunidad para construir el hogar que siempre has deseado, rodeado de paz y naturaleza.</p>
+        </section>
+    
+        <section id="ubicacion">
+            <h2>Ubicación y Accesibilidad</h2>
+            <p>Los lotes se encuentran estratégicamente ubicados en el municipio de Agua de Dios, Cundinamarca, a tan solo 2 kilómetros del centro del municipio. Su privilegiada ubicación los sitúa sobre una vía pavimentada que conduce directamente hacia el municipio de Tocaima, garantizando un fácil acceso desde y hacia la propiedad. Esta conveniente localización no solo ofrece proximidad a los servicios y comodidades del centro urbano, sino que también brinda una conexión directa con otras áreas de interés en la región. Ya sea que viajes en transporte público o en vehículo privado, llegar a estos lotes es sencillo y conveniente, asegurando una experiencia de acceso cómoda para todos los interesados en construir su hogar campestre en esta pintoresca localidad.</p>
+        </section>
+    
+        <section id="amenidades">
+            <h2>Amenidades y Características</h2>
+            <ul>
+                <p>Este impresionante predio ofrece una amplia gama de amenidades y características especiales que lo hacen único en su clase. Disfruta de la comodidad y conveniencia de contar con servicios domiciliarios de agua, luz y gas, lo que garantiza un estilo de vida moderno y confortable en medio del campo. El terreno, completamente plano, cuenta con dos hermosos lagos que añaden un toque de belleza natural y serenidad al paisaje circundante, creando un entorno perfecto para relajarse y disfrutar de actividades al aire libre.</p>
+
+                <p>Además, el uso de suelo sub urbano del predio permite la subdivisión de hasta 42 lotes, con una extensión aproximada de 1500 metros cuadrados cada uno, ideales para la construcción de viviendas campestres de estrato 3 en adelante. Los residentes tendrán la libertad de diseñar y construir la casa de sus sueños, con la posibilidad de añadir comodidades como piscina, zona de barbacoa, jardines con árboles frutales, entre otros.</p>
+
+                <p>Pero eso no es todo, ¡la propiedad también cuenta con un uso de suelo de corredor de servicios! Esta característica permite la construcción de comercios a lo largo de la carretera, como centros comerciales, restaurantes, gastrobares, canchas sintéticas, y mucho más. Esta versatilidad ofrece infinitas oportunidades de inversión y brinda mayor comodidad tanto a los residentes como a los visitantes, convirtiendo a este predio en un destino ideal para aquellos que buscan un estilo de vida exclusivo en un entorno campestre de primer nivel.</p>
+
+            </ul>
+        </section>
     </div>
     
+    <!-- Contenedor de botones de redes sociales -->
     <div id="redes">
-        <div style="display: inline-block;">
+        <div style="display: inline-block; margin: 0; padding: 0;">
+            <p>Carrera 11 #13-25</p>
+            <p>Finca Santa Rosa</p>
+            <p>Telefono: 3204100218</p>
+            <p>Correo: jcsalamanca1325@gmail.com</p>
             <a href="https://wa.me/numerodetelefono" class="boton-redes"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/tuusuario" class="boton-redes"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/tuusuario" class="boton-redes"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
     
-    
-    <div style="padding: 2px; font-size: 12px;">
-        <div style="text-align: center; margin-top: 10px;">
-            <p>© 2024, LAGOS DE SALAMANCA - SANTA ROSA. Agua de Dios, Cund.</p>
-            <p>Diseñado y Desarrollado por CESAR D. SALAMANCA M. 2024</p>
-        </div>
+    <!-- Contenedor de información del pie de página -->
+    <div id="info-footer">
+        <p>© 2024, LAGOS DE SALAMANCA - SANTA ROSA. Agua de Dios, Cund.</p>
+        <p>Diseñado y Desarrollado por CESAR D. SALAMANCA M. 2024</p>
     </div>
-    
 
 </body>
 </html>
